@@ -18,6 +18,10 @@ const UserSchema = new Schema(
       type: String,
       required: true,
     },
+    filter: {
+      type: Array,
+      default: [],
+    },
   },
   { timestamps: true }
 );
