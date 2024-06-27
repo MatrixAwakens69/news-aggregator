@@ -42,7 +42,6 @@ const SignIn = () => {
       }
 
       const data = await response.json();
-      console.log(data);
       navigate("/dashboard");
     } catch (error) {
       console.error(error);
