@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import express from "express";
 import mongoose from "mongoose";
 import userRouter from "./routes/userRoute.js";
+import spacyRouter from "./routes/spacyRoute.js";
 
 dotenv.config();
 
@@ -22,6 +23,7 @@ app.listen(process.env.PORT, () => {
 });
 
 app.use("/api/user", userRouter);
+app.use("/api/spacy", spacyRouter);
 
 app.get("/test", (req, res) => {
   res.send("Hello World!");
